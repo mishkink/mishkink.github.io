@@ -1,0 +1,470 @@
+<html>
+
+<head>
+   
+  <title>Education Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="script.js"></script>
+  <body style="background-color:rgb(97, 97, 100);">
+  <link rel="stylesheet" href="style.css">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+
+  
+  
+</head>
+
+
+<style>
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: rgb(134, 7, 7);
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  </style>
+  
+<!-- </head> -->
+<style>
+    .fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+</style>
+<body>
+    <center><h1 style="color:rgba(247, 246, 241, 0.966)" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" text-align: center ><strong> Education Spending Analysis of G20 countries</strong></h1></center>
+    
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="education.html">Educational Spending</a>
+      <a href="health.html">Healthcare Spending</a>
+      <a href="military.html">Military Spending</a>
+      <a href="conclusion.html">Conclusion</a>
+    </div>
+
+
+
+
+
+<body>
+
+    <div class="container">
+                <h3 style="color:rgba(247, 246, 241, 0.966)"> The data analysis performed here contributes to a better understanding of:</h3>
+                
+        
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1. Education Expenditure per person in G20 countries</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in ">
+                    <div class="panel-body">
+                      <div class="chart_box" style="max-width: 100%; max-height: 100%;">
+                        <div id="edu11_div" style="width: 900px; height: 500px;"></div>
+                      </div>
+                      <p><ul><li>It can be seen that Australia is the country which has been on top in terms of Education expenditure, with the highest value of 3564 US dollars per person in 2010.</li>
+                        <li> Followed by France, Canada, Germany, Japan and US with an average expenditure of 2300 US dollars per capita.</li>
+                        <li> High population can be a big reason for India and China to have lowest Education Expenditure.</li>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            
+        
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2. Comparison of Educational spending to that of country's GDP</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="chart_box" style="max-width: 100%; max-height: 100%;">
+                        <div id="edu2_div" style="width: 900px; height: 500px;" ></div>
+                    </div>
+                    <p>
+                      <ul>
+                        <li>Overall, the education expenditure as a percentage of GDP has decreased among the G20 countries.</li>
+                        <li>It can be seen that education expenditure is no longer a priority for the advanced countries, whereas emerging countries like
+                          Indonesia and India has seen a significant rise in education expenditure.
+                        </li>
+                      </ul>
+                    </p>  
+                      
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3. Comparison of the per person educational spending to the per person GDP</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="chart_box" style="max-width: 100%; max-height: 100%;">
+                        <div id="edu3_div" style="width: 900px; height: 500px;" ></div>
+                    </div>
+                    <p>
+                        <ul>
+                          <li>It can be clearly seen that a very less percentage of the country's total spending is spent on Education in almost all the countries. </li>
+                          <li>Australia, Japan, Canada, Germany, France do show considerable spending.</li>
+                    </p>  
+                </div>
+            </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4. Average Expenditure on Eduaction vs Military Expenditure</a>
+                  </h4>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse in ">
+                  <div class="panel-body">
+                    <div class="chart_box" style="max-width: 100%; max-height: 100%;">
+                      <div id="edu4_div" style="width: 900px; height: 500px;"></div>
+                    </div>
+                    <p>
+                      <ul>
+                        <li>In most of the countries, average expenditure on Education is more than double to that of Military Spending.</li>
+                        <li>Whereas, in Russia and US, the spending is uniformly distributed in case of education and Military.</li>
+                      </ul>
+                    </p>
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+
+
+
+        </div>
+    </div>
+
+    
+
+
+        <!--START CHART -->
+<!--First Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!--Only load the above ONCE per page-->
+
+<script type="text/javascript">
+// Load the Visualization API and the corechart package.
+//include extra packages that or not included in the corechart package  
+// corechart package includes (bar, column, line, area, stepped area, bubble, pie, donut, combo, candlestick, histogram, scatter)
+google.charts.load('current', {
+    packages: ['corechart', 'annotationchart', 'table']
+});
+// Set a callback to run when the Google Visualization API is loaded
+//google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(init);
+
+/*
+The syntax of the query language is composed of the following clauses. 
+The order of the clauses must be as follows:
+
+select    Selects which columns to return, and in what order. If omitted, all of the table's columns are returned, in their default order.
+where   Returns only rows that match a condition. If omitted, all rows are returned.
+group by  Aggregates values across rows.
+pivot   Transforms distinct values in columns into new columns.
+order by  Sorts rows by values in columns.
+limit   Limits the number of returned rows.
+offset    Skips a given number of first rows.
+label   Sets column labels.
+format    Formats the values in certain columns using given formatting patterns.
+*/
+
+/*send the query - using the "sheet" parametre not the GID parameter
+
+The query supports the following optional parameters:
+headers=N: Specifies how many rows are header rows, where N is an integer zero or greater. 
+These will be excluded from the data and assigned as column labels in the data table. 
+If you don't specify this parameter, the spreadsheet will guess how many rows are header rows. 
+Note that if all your columns are string data, the spreadsheet might have difficulty determining which rows are header rows without this parameter
+
+gid=N: Specifies which sheet in a multi-sheet document to link to, if you are not linking to the first sheet. N is the sheet's ID number. 
+You can learn the ID number by navigating to the published version of that sheet and looking for the gid=N parameter in the URL. 
+You can also use the sheet parameter instead of this parameter. Gotcha: Google Spreadsheets might rearrange the gid parameter in the URL when viewed in a browser; 
+if copying from a browser, be sure that all parameters are before the URL's # mark. Example: gid=1545912003.
+
+sheet=sheet_name: Specifies which sheet in a multi-sheet document you are linking to, if you are not linking to the first sheet. 
+sheet_name is the display name of the sheet. Example: sheet=Sheet5.
+*/
+
+
+
+//send the query - using the "sheet" parametre - handleSampleDataQueryResponse) not the GID parameter - (handleQueryResponse)
+function drawChart(chartId) {
+    var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/13ZXjNfFOf0glEzEkAg5VWXNTP3oZPaDR9WKwa0kTrds/gviz/tq?sheet=Sheet2&headers=1&tq=SELECT A, B   where B > 0 and B <= 5 ORDER BY B desc  limit 1000 offset 0');
+
+    //mychart
+    //mychart2
+    query.send(function(response){
+      handleSampleDataQueryResponse(response, chartId);
+    }); //have to change this to handleSampleDataQuery2Response when have more than one chart on the page 
+}
+
+//draw the chart -  - using the "sheet" parameter - handleSampleDataQueryResponse) not the GID parameter - (handleQueryResponse)
+//have to change this to handleSampleDataQuery2Response(response) when have more than one chart on the page
+function handleSampleDataQueryResponse(response, chartId) {
+    // ADD some error handling - START
+    if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+    }
+    // ADD some error handling - END
+
+    //get data table
+    var data = response.getDataTable();
+
+
+    //adjust chart and bar height according to how many rows
+    var chartAreaHeight = data.getNumberOfRows() * 30;
+    var chartHeight = chartAreaHeight + 400;
+
+
+
+    // Set chart options - START
+    var options = {
+        //set transparency of the chart background, whether the chart is stacked and importantly, 
+        //the physical height, in pixels of the chart.
+        backgroundColor: 'transparent',
+        isStacked: false,
+        height: chartHeight,
+
+
+        // control colours of lines NOTE this overides automatic colouring
+        colors: ['orange', 'magenta', "blue"],
+        //control opacity of bars
+        dataOpacity: .85,
+
+        chartArea: {
+            height: chartAreaHeight,
+            top: "100",
+            right: "100",
+            bottom: "100",
+            left: "100"
+        },
+        /*An object with members to configure the placement and size of the chart area (where the chart itself is drawn, 
+        excluding axis and legends). Two formats are supported: a number, or a number followed by %. 
+        A simple number is a value in pixels; a number followed by % is a percentage.*/
+
+
+
+        animation: {
+            startup: 'true',
+            duration: '3000',
+            easing: 'inAndOut'
+        },
+        //makes the chart transparent so the background color shows through
+
+        // chart title
+        title: 'MSQ Results',
+        titleTextStyle: {
+            color: 'white',
+            fontSize: 30,
+            fontName: 'arial',
+            bold: false,
+            italic: false
+        },
+        // control position of legend
+        legend: {
+            position: 'top',
+            textStyle: {
+                color: 'orange',
+                fontSize: 24
+            }
+        },
+
+        // horizontal axis title and formating
+        vAxis: {
+            textPosition: 'in',
+            title: 'SYMPTOMS',
+            titleTextStyle: {
+                color: 'white',
+                fontSize: 24,
+                fontName: 'Arial',
+                bold: false,
+                italic: false
+            },
+            textStyle: {
+                color: 'black',
+                fontSize: 13,
+                fontName: 'Arial',
+                bold: false,
+                italic: false
+            },
+            gridlines: {
+                color: 'white',
+                count: 5,
+                units: ''
+            },
+            minorGridlines: {
+                color: 'green',
+                count: 0,
+                units: ''
+            }
+        },
+
+        // horizontal axis title and formating
+        hAxis: {
+            baseline: 0,
+            baselineColor: 'white',
+            title: 'SCORE',
+            titleTextStyle: {
+                color: 'white',
+                fontSize: 24,
+                fontName: 'Arial',
+                bold: false,
+                italic: false
+            },
+            textStyle: {
+                color: 'white',
+                fontSize: 18,
+                fontName: 'Arial',
+                bold: false,
+                italic: false
+            },
+            minValue: 0,
+            maxValue: 4,
+            gridlines: {
+                color: 'white',
+                count: 5,
+                units: ''
+            },
+            minorGridlines: {
+                color: 'green',
+                count: 0,
+                units: ''
+            }
+        },
+
+    };
+    // Set chart options - END
+
+
+
+    console.log('chartId111', chartId);
+
+    //draw the chart
+    var chart = new google.visualization.BarChart(document.getElementById(chartId)); //have to change this to mychart2 when have more than one chart on the page 
+
+
+    chart.draw(data, options);
+
+
+    window.addEventListener('resize', function() {
+        chart.draw(data, options);
+    }, false);
+
+
+  }
+
+function init () {
+
+  console.log('init');
+
+  $.each($('.panel-heading'), function(){
+     var chartItem = $(this).parents('.panel').find('.chart-item');
+     var chartId = chartItem.attr('id');
+
+     console.log('chartId', chartId);
+
+     drawChart(chartId);
+  })
+
+}
+
+$('.panel-heading').click(function(){
+
+    var chartItem = $(this).parents('.panel').find('.chart-item');
+    var chartId = chartItem.attr('id');
+
+    drawChart(chartId);
+
+})
+
+
+  
+</script>
+    
+</body>
+</html>
